@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title> HobbyteOverFour </title>
+    <title> Build My Model </title>
     <meta charset="UTF-8">
     </head>
 
-    <body style="background-color:powderblue;">
-        <h1 style="color:blue; font-family:verdana; text-align:center;">Welcome to HobbyteOverFour</h1>
-            <h2 style="font-size:300%;">Introduction</h2>
-        <p>This is a blog on our projects</p>
-        <pre style="font-family:verdana; text-align:center;">
-            We would like to start off by learning how to build this website.
-            And then, we will continue to do other projects.
-            Meanwhile, we will also learn how to use git repository sharing, 
-            as well as configuring or setting up the dev environment
-        </pre>
+    <body style="background-color:cornsilk;">
+        <h1 style="color:mediumturquoise; font-family:verdana; text-align:left;">Build My Model</h1>
+            <h3>Selected file: Empty</h2>
+            <button type="button" onclick="alert('You have successfully uploaded your file!')">Upload</button>
         <hr>         </hr>
-            <h2 style="color:red;">Blog Schedule page</h2>
+            <h3>Machine Learning Model:</h2>
+            <select>
+                <option value="linearReg">Linear Regression</option>
+                <option value="k-means">k-nearest Mean</option>
+                <option value="logReg">Logistic Regression</option>
+                <option value="softmax">SoftMax</option>
+            </select>
 
-             <hr>         </hr>
-            <h3>First Blog</h3>
-            <p  title="First blog">Learning HTML and Web development</p>
-                <a href="https://www.w3schools.com">Following this tutorial...</a>
-                <img src="pic02.jpg" alt="random pic02" width="104" height="142"></img>
-                <br>
-                ...
+            <h3>Set relevant Hyperparameters:</h2>
+            <!--<select>
+                <option value="k-value">k</option>
+                <option value="maxiteration">max iterations</option>
+            </select>-->
+            <form action="enterhyperparameters">
+                k: <input type="text" name="k-value" value="enter value"><br>
+                max iterations: <input type="text" name="maxiteration" value="enter value"><br>
+            </form>  
 
-            <hr>        </hr>
-            <h3>Second Blog</h3>
-             <p title="Second blog">Second blog: How to set up git</p>
+            <h3>Add regularizer:</h2>
+            <select>
+                <option value="L0">L0</option>
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+            </select>
+
+            <form action="enterAlphaValue">
+                alpha: <input type="text" name="alpha" value="enter value"><br>
+            </form>            
+
+            <h3>Select plot type:</h2>
+            <select>
+                <option value="scatter">Scatter graph</option>
+                <option value="line">Line graph</option>
+            </select>
+
+            <button type="button" onclick="alert('display plot!')">Plot</button>
+        <hr>         </hr>
     </body>
 </html>
