@@ -3,11 +3,19 @@
     <head>
     <title> Build My Model </title>
     <meta charset="UTF-8">
-    </head>
-
+    </head> 
     <body style="background-color:cornsilk;">
+	
+		
         <h1 style="color:mediumturquoise; font-family:verdana; text-align:left;">Build My Model</h1>
-            <h3>Selected file: Empty</h2>
+		
+		<form enctype="multipart/form-data" action="upload_file.php" method="post">
+		Browse file to upload <br>
+		<input name="file" type="file" id="file"><br><br>
+		<input type="submit" id="u_button" name="u_button" value="Upload the file">
+		</form>
+            
+			<h3>Selected file: Empty</h2>
             <button type="button" onclick="alert('You have successfully uploaded your file!')">Upload</button>
         <hr>         </hr>
             <h3>Machine Learning Model:</h2>
