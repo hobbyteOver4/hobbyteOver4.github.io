@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" href="styles.css">
     <title> Build My Model </title>
     <meta charset="UTF-8">
     </head> 
@@ -9,14 +10,18 @@
 		
         <h1 style="color:mediumturquoise; font-family:verdana; text-align:left;">Build My Model</h1>
 		
+		<h3>Browse File to Upload</h3>
 		<form enctype="multipart/form-data" action="upload_file.php" method="post">
-		Browse file to upload <br>
-		<input name="file" type="file" id="file"><br><br>
+		<label>
+		<input name="file" type="file" id="file">
+		</label>
+		<label>
 		<input type="submit" id="u_button" name="u_button" value="Upload the file">
+		</label>
 		</form>
             
         <hr>         </hr>
-            <h3>Machine Learning Model:</h2>
+            <h3>Machine Learning Model:</h3>
             <select>
                 <option value="linearReg">Linear Regression</option>
                 <option value="k-means">k-nearest Mean</option>
@@ -24,17 +29,24 @@
                 <option value="softmax">SoftMax</option>
             </select>
 
-            <h3>Set relevant Hyperparameters:</h2>
+            <h3>Set relevant Hyperparameters:</h3>
             <!--<select>
                 <option value="k-value">k</option>
                 <option value="maxiteration">max iterations</option>
             </select>-->
+            <p>
             <form action="enterhyperparameters">
-                k: <input type="text" name="k-value" value="enter value"><br>
-                max iterations: <input type="text" name="maxiteration" value="enter value"><br>
+            	<label>
+                k: <input type="text" name="k-value" value="enter value" />
+                </label>
+                <label>
+                max iterations: <input type="text" name="maxiteration" value="enter value" />
+                </label>
             </form>  
+            <p>
 
-            <h3>Add regularizer:</h2>
+            <h3>Add regularizer:</h3>
+            <p>
             <select>
                 <option value="L0">L0</option>
                 <option value="L1">L1</option>
@@ -44,8 +56,8 @@
             <form action="enterAlphaValue">
                 alpha: <input type="text" name="alpha" value="enter value"><br>
             </form>            
-
-            <h3>Select plot type:</h2>
+            <p>
+            <h3>Select plot type:</h3>
             <select>
                 <option value="scatter">Scatter graph</option>
                 <option value="line">Line graph</option>
